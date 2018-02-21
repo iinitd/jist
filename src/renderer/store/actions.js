@@ -4,6 +4,13 @@ import { ipcRenderer } from 'electron';
 import marked from 'marked'
 import _ from 'underscore'
 import moment from 'moment'
+import highlightjs from "highlight.js";
+
+
+marked.setOptions({
+  highlight: code => highlightjs.highlightAuto(code).value
+});
+
 
 const md = (file) => {
 

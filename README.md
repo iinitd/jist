@@ -2,6 +2,16 @@
 
 > A Code Snippets Manager for Github Gist.
 
+![](preview.jpeg)
+
+#### Feature
+
+- Local storage
+- Quick search
+- More meta information
+- Code highlighting
+- Sync with Github Gist
+
 #### Build Setup
 
 ``` bash
