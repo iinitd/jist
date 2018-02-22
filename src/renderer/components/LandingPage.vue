@@ -130,8 +130,8 @@
 <el-container class="wrapper">
     <el-header class="top-header unselectable" style="-webkit-app-region: drag;" height="60px">
         <div class="left-side">
-            <i class="el-icon-error" @click="windows('close')"></i>
-            <i class="el-icon-remove" @click="windows('min')"></i>
+            <i class="el-icon-error" style="-webkit-app-region: no-drag;" @click="windows('close')"></i>
+            <i class="el-icon-remove" style="-webkit-app-region: no-drag;" @click="windows('min')"></i>
         </div>
         <!--
         <div class="unselectable" style="cursor: pointer;">Pad</div> -->
@@ -140,8 +140,8 @@
             <el-dialog title="用户中心" :visible.sync="dialogVisible" width="30%" center>
                 <LoginPanel/>
             </el-dialog>
-            <el-button type="plain" @click="dialogVisible = true" size="small" icon="el-icon-menu" round></el-button>
-            <el-button type="plain" size="small" icon="el-icon-edit-outline" @click="newFile()" round></el-button>
+            <el-button type="plain" style="-webkit-app-region: no-drag;" @click="dialogVisible = true" size="small" icon="el-icon-menu" round></el-button>
+            <el-button type="plain" style="-webkit-app-region: no-drag;" size="small" icon="el-icon-edit-outline" @click="newFile()" round></el-button>
         </div>
     </el-header>
 
@@ -181,6 +181,7 @@ import WelcomePanel from './WelcomePanel';
 import LoginPanel from './LoginPanel';
 import Menu from './Menu'
 
+const { ipcRenderer: ipc } = require("electron");
 
 let self;
 

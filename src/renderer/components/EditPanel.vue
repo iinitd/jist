@@ -91,7 +91,6 @@
 </template>
 
 <script>
-const { ipcRenderer: ipc } = require("electron");
 
 let self;
 
